@@ -1,0 +1,12 @@
+{
+    "scripts": {
+      "dev": "concurrently \"php artisan serve\" \"vite\"",
+      "build": "vite build",
+      "preview": "vite preview",
+      "lint:js": "eslint . --ext .js,.ts --ignore-path .gitignore",
+      "format:js": "prettier --write \"**/*.{js,ts,json,md,yml,yaml}\"",
+      "lint": "npm run lint:js && composer lint:php",
+      "format": "npm run format:js && composer format:php",
+      "test": "composer test"
+    }
+  }
