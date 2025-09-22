@@ -1,0 +1,105 @@
+🔹 1. Convention
+
+Définition :
+Une convention est un ensemble de règles partagées entre développeurs pour garder un dépôt cohérent, lisible et facile à maintenir (ex. : nommage des variables, structure des dossiers, style de code).
+
+Comment l’utiliser :
+
+Définir les conventions dans un fichier CONTRIBUTING.md ou README.md.
+
+Par exemple : décider que toutes les variables JS doivent être en camelCase, que les composants React commencent par une majuscule, etc.
+
+Faire respecter ces conventions via des revues de code, linting ou formatters.
+
+🔹 2. Lint
+
+Définition :
+Un linter est un outil d’analyse statique du code qui détecte automatiquement des erreurs de syntaxe, de style ou de bonnes pratiques (ex. : oubli de point-virgule, variable non utilisée).
+
+Comment l’utiliser :
+
+Installer un linter adapté au langage :
+
+JavaScript/TypeScript : ESLint
+
+Python : Flake8 ou Pylint
+
+Exemple avec ESLint :
+
+npm install eslint --save-dev
+npx eslint .
+
+
+Configurer des règles dans .eslintrc.json.
+
+Intégrer le linter dans la CI/CD pour bloquer du code non conforme.
+
+🔹 3. Format
+
+Définition :
+Un formatter applique automatiquement un style de code défini (indentation, espaces, guillemets, etc.), contrairement au linter qui signale seulement les erreurs.
+
+Comment l’utiliser :
+
+Outil courant : Prettier pour JS/TS.
+
+Installation :
+
+npm install prettier --save-dev
+npx prettier --write .
+
+
+Configurer les règles dans .prettierrc.
+
+Ajouter un hook Git (avec Husky) pour formatter avant chaque commit.
+
+🔹 4. Conventional Commits
+
+Définition :
+Un standard pour rédiger les messages de commit afin de les rendre lisibles et exploitables automatiquement (changlog, versioning).
+
+Format :
+
+<type>(scope): message
+
+
+Exemples :
+
+feat(auth): ajout du login avec Google
+
+fix(api): correction du timeout
+
+docs(readme): ajout d’exemples
+
+Comment l’utiliser :
+
+Suivre la convention à chaque commit.
+
+Installer un outil de validation comme commitlint pour bloquer les mauvais messages :
+
+npm install @commitlint/config-conventional @commitlint/cli --save-dev
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+
+🔹 5. EditorConfig
+
+Définition :
+Un fichier .editorconfig qui définit des règles d’édition (indentation, charset, fin de ligne…) pour que tous les contributeurs aient les mêmes réglages, quel que soit leur éditeur.
+
+Comment l’utiliser :
+
+Créer un fichier .editorconfig à la racine :
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+Installer le plugin EditorConfig dans VS Code, IntelliJ, etc.
+
+Les réglages seront appliqués automatiquement quand on édite les fichiers.
