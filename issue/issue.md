@@ -1,23 +1,37 @@
-## Contexte
-Pourquoi on fait ça ? (problème, valeur)
+# 🧩 User Story Template
 
-## User Story
-En tant que <rôle>, je veux <action> afin de <bénéfice>.
+## 🧭 Context
+Why are we doing this? (problem, value)
 
-## Critères d’acceptation (Given/When/Then)
-- Given ...
-- When ...
-- Then ...
+---
 
-## Portée
-- In scope : ...
-- Out of scope : ...
+## 👤 User Story
+As a **<role>**, I want to **<action>** so that **<benefit>**.
 
-## Notes techniques
-Schéma, endpoints, migrations, perfs, risques…
+---
 
-## Tests
-Cas à couvrir (unitaires, HTTP, e2e si besoin)
+## ✅ Acceptance Criteria (Given / When / Then)
+- **Given** ...
+- **When** ...
+- **Then** ...
 
-## Pièces jointes
-Captures / wireframes / liens
+---
+
+## 📦 Scope
+- **In scope:** ...
+- **Out of scope:** ...
+
+---
+
+## ⚙️ Technical Notes
+Diagrams, endpoints, migrations, performance considerations, risks, etc.
+
+---
+
+## 🧪 Tests
+List test cases to cover (unit, HTTP, e2e if needed)
+
+---
+
+## 📎 Attachments
+Screenshots, wireframes, or external links
